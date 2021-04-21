@@ -62,7 +62,7 @@ const Celulas = () =>
 
     return (
         
-        <div className="row UI__celulas mt-3 p-5 color__primaryText">
+        <div className="row UI__celulas mt-3 p-5 color__primaryText" id="rowCelulas">
             
             <div className="row mb-5" id="rowTitle">
                 
@@ -79,7 +79,7 @@ const Celulas = () =>
                     
                     <div className="base__circle base__alingCenter color__primaryBg" style={{ height : "250px", width : "250px" }}>
                         <center>
-                            <img className="card-img-top" src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1618856089/Landing%20test%20sources/celula3b_j1unah.gif" alt="sml" style={{ height : "200px", width : "200px" }}/>
+                            <img className="card-img-top" src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1619017088/Landing%20test%20sources/celulaV2-1_qlntld.gif" alt="sml" style={{ height : "200px", width : "200px" }}/>
                         </center>
                     </div>
                     
@@ -97,7 +97,7 @@ const Celulas = () =>
                 <div id="cardCel2" className="card base__noBorder base__alingCenter" style={ { width : "18rem", height : "100%" } }>
                     
                     <div className="base__circle base__alingCenter color__primaryBg" style={{ height : "250px", width : "250px" }}>
-                            <img className="card-img-top" src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1618855329/Landing%20test%20sources/celula2b_sth0rx.gif" alt="sml" style={{ height : "200px", width : "200px" }}/>
+                            <img className="card-img-top" src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1619019188/Landing%20test%20sources/celulaV2-2_qodg33.gif" alt="sml" style={{ height : "200px", width : "200px" }}/>
                     </div>
 
                     <div className="card-body text-center">
@@ -115,7 +115,7 @@ const Celulas = () =>
                    
                     <div className="base__circle base__alingCenter color__primaryBg" style={{ height : "250px", width : "250px" }}>
                         <center>
-                            <img className="card-img-top" src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1618857012/Landing%20test%20sources/celula4b_ns3gj7.gif" alt="sml" style={{ height : "200px", width : "200px" }}/>
+                            <img className="card-img-top" src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1619023384/Landing%20test%20sources/celulaV2-3_kplyys.gif" alt="sml" style={{ height : "200px", width : "200px" }}/>
                         </center>
                     </div>
 

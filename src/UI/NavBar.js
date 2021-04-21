@@ -50,7 +50,7 @@ const NavBar = () =>
 
                     <div className="col-12 col-md-2 base__alingLine  mt-2" style={{ fontSize : "1.1rem" }}>
 
-                        <span className="base__pointer base__marginRight2Rem text-center heartbeat" style={{ width : "100%" }}>Contactanos</span>
+                        <span className="base__pointer base__marginRight2Rem text-center" style={{ width : "100%" }}>Blog</span>
 
                     </div>
 

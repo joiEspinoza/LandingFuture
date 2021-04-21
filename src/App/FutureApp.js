@@ -7,6 +7,7 @@ import Testimonios from '../UI/Testimonios';
 import Infografia from '../UI/Infografia';
 import Productos from '../UI/Productos';
 import Footer from '../UI/Footer';
+import BotonContact from '../UI/BotonContact';
 
 
 //////<<<<<------------------------------------------------``
@@ -18,7 +19,7 @@ const FutureApp = () =>
     return (
         
         <>
-            <button className="btn__btnBaseContact btn color__tertiaryBg color__primaryText">C<br/>o<br/>n<br/>t<br/>a<br/>c<br/>t<br/>a<br/>n<br/>o<br/>s</button>
+            <BotonContact/>
             
             <NavBar/>
 

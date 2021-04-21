@@ -21,6 +21,15 @@
    align-items: center;
  }
 
+ .base__alingCenterRow
+ {
+   display: flex !important;
+   flex-direction: row !important;
+   justify-content: center !important;
+   align-items: center !important;
+ }
+
+
 
  .base__alingCenter
  {
@@ -32,8 +41,8 @@
 
  .base__alingLine
  {
-   display: flex;
-   justify-content: left;
+   display: flex !important;
+   justify-content: left !important;
  }
 
 
@@ -78,6 +87,11 @@
  .base__P8
  {
     padding: 8rem !important;
+ }
+
+ .base__mt50
+ {
+    margin-top: 10%;
  }
  
 /**********************************************************************************/
