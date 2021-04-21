@@ -1,0 +1,89 @@
+ html, body
+ {
+    width: 100%;
+    height: auto;
+    background-color: white;
+    overflow-x: hidden;
+
+ }
+
+ p
+ {
+    margin : 0 !important;
+ }
+
+
+ .base__alingCenterColum
+ {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+ }
+
+
+ .base__alingCenter
+ {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
+
+ .base__alingLine
+ {
+   display: flex;
+   justify-content: left;
+ }
+
+
+ .base__marginRight2Rem
+ {
+    margin-right: 2rem;
+ }
+
+
+ .base__pointer
+ {
+    cursor: pointer;
+ }
+
+
+ .base__noBorder
+ {
+    border: none !important;
+ }
+
+
+ .base_backTransparent
+ {
+   background-color: transparent !important;
+ }
+
+ .base__circle
+ {
+    border-radius: 200px 200px 200px 200px;
+    -moz-border-radius: 200px 200px 200px 200px;
+    -webkit-border-radius: 200px 200px 200px 200px;
+    border: 0px solid #000000;
+ }
+
+
+ .base_ml5
+ {
+    margin-left: 5rem !important;
+ }
+
+
+ .base__P8
+ {
+    padding: 8rem !important;
+ }
+ 
+/**********************************************************************************/
+
+
+ .card
+ {
+   background-color: transparent;
+ }

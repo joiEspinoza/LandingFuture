@@ -1,0 +1,76 @@
+.UI__nav
+{
+    height: 10%;
+    width: 100vw;
+    //background-color: transparent !important;
+
+}
+
+
+.UI__precentacion
+{
+    height: 80%;
+    width: 100vw;
+    padding: 1rem;
+}
+
+
+.UI__tecnologias
+{
+    height: 30%;
+    width: 100vw;
+}
+
+
+.UI__celulas
+{
+    height: 100%;
+    width: 100vw;
+    background-color: $tertiary;
+}
+
+
+.UI__testimonios
+{
+    height: 200%;
+    width: 100vw;
+}
+
+
+.UI__infografia
+{
+    height: 100%;
+    width: 100vw;
+    background-color: $tertiary;
+
+}
+
+
+.UI__Productos
+{
+    height: 50%;
+    width: 100vw;
+
+}
+
+
+.UI__footer
+{
+    height: 50%;
+    width: 100vw;
+    background-color: darkmagenta;
+}
+
+
+@media only screen and (max-width: 767px) 
+{
+
+    .UI__nav
+    {
+    
+        height: auto !important;
+
+    }
+
+
+}

@@ -1,0 +1,39 @@
+$primary : #ffffff;
+
+$secondary : #8E54E9;
+
+$tertiary : #102647;
+
+
+.color__primaryText
+{
+    color : $primary !important;
+}
+
+.color__primaryBg
+{
+    background-color : $primary !important;
+}
+
+
+.color__secundaryText
+{
+    color : $secondary !important;
+}
+
+.color__secundaryBg
+{
+    background-color : $secondary !important;
+}
+
+
+.color__tertiaryText
+{
+    color : $tertiary !important;
+}
+
+
+.color__tertiaryBg
+{
+    background-color : $tertiary !important;
+}
