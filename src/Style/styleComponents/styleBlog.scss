@@ -1,0 +1,115 @@
+.blog__card
+{
+    width: 50% !important;
+}
+
+
+.blog__coverImg
+{
+    width: 80vw;
+    height: 50vh;
+    background-repeat: no-repeat;
+    background: 0 / cover fixed;
+
+}
+
+
+.blog__title
+{
+    color: white;
+    text-align: left;
+    margin-top: 20%;
+    background-color:black;
+    line-height : 3rem;
+    opacity: 0.8;
+
+}
+
+
+.card-custom 
+{
+    overflow: hidden;
+    min-height: 220px;
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+
+    &:hover
+    {
+        -webkit-box-shadow: 0px 0px 3px 0px $tertiary;
+        -moz-box-shadow: 0px 0px 3px 0px $tertiary;
+        box-shadow: 0px 0px 3px 0px $tertiary;
+    }
+    
+}
+  
+
+.card-custom-img 
+{
+    height: 250px;
+    min-height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-color: inherit;
+}
+  
+
+.card-custom-img::after 
+{
+    position: absolute;
+    content: '';
+    top: 220px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-top-width: 40px;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 545px;
+    border-left-width: calc(575px - 5vw);
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: inherit;
+}
+  
+
+
+.blog__btn
+{
+    width: 40% !important;
+
+}
+
+
+.blog__marginBtn
+{
+    margin-left: 0.5rem !important;
+}
+
+
+.blog__textArea
+{
+    width: 80vw !important;
+    height: auto;
+    background-color: white !important;
+    border: none !important;
+    box-decoration-break: unset;
+}
+
+
+.blog__boxUpdate
+{
+    -moz-border-radius: 34px 34px 34px 34px;
+    -webkit-border-radius: 34px 34px 34px 34px;
+    border: 0px solid #000000;
+    -webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
+    padding: 2rem;
+    overflow: auto;
+}
+
+

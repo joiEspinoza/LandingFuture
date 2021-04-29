@@ -1,13 +1,7 @@
 import React from 'react';
-import Presentacion from '../UI/Presentacion';
-import NavBar from '../UI/NavBar';
-import Tecnologias from '../UI/Tecnologias';
-import Celulas from '../UI/Celulas';
-import Testimonios from '../UI/Testimonios';
-import Infografia from '../UI/Infografia';
-import Productos from '../UI/Productos';
-import Footer from '../UI/Footer';
-import BotonContact from '../UI/BotonContact';
+import { Provider } from 'react-redux';
+import RouterApp from '../Router/RouterApp';
+import { store } from '../Store/store';
 
 
 //////<<<<<------------------------------------------------``
@@ -17,28 +11,13 @@ const FutureApp = () =>
 {
     
     return (
-        
-        <>
-            <BotonContact/>
+
+        <Provider store={ store }>
             
-            <NavBar/>
-
-            <Presentacion/>
-
-            <Tecnologias/>
-
-            <Celulas/>
-
-            <Testimonios/>
-
-            <Infografia/>
-
-            <Productos/>
-
-            <Footer/>
+            <RouterApp/>
         
-        </>
-    )
+        </Provider>
+    );
 
 };
 

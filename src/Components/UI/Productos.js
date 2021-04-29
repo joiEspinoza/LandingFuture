@@ -10,17 +10,19 @@ const Productos = () =>
   window.addEventListener( "scroll", () => 
   { 
 
-      let semaforo = false;
-      const rowProducto = document.getElementById("rowProducto");
-      const colInfografiaRose1 = document.getElementById("colInfografiaRose1");
-      const colInfografiaRose2 = document.getElementById("colInfografiaRose2")
+    let semaforo = false;
+    const rowProducto = document.getElementById("rowProducto");
+    const colInfografiaRose1 = document.getElementById("colInfografiaRose1");
+    const colInfografiaRose2 = document.getElementById("colInfografiaRose2")
+
+    if( rowProducto && colInfografiaRose1 && colInfografiaRose2 )
+    {
 
       let posicionRowProducto = rowProducto.getBoundingClientRect().top;
 
       if( posicionRowProducto.toFixed(2) <= 667  )
       {
           semaforo = true;
-
       };
 
       if( semaforo )
@@ -42,7 +44,11 @@ const Productos = () =>
         colInfografiaRose2.classList.remove("animate__animated");
         colInfografiaRose2.classList.remove("animate__fadeInRight");
         colInfografiaRose2.classList.remove("animate__delay-1s");
+      
       };
+    
+    };
+     
 
   });
 
@@ -63,7 +69,7 @@ const Productos = () =>
 
     return (
         
-        <div className="row UI__Productos mt-5 mb-5" id="rowProducto">
+        <div className="row UI__Productos mt-3 p-4" id="rowProducto">
             
             <div className="col-md-12">
                 
@@ -74,7 +80,7 @@ const Productos = () =>
                     <div className="card p-3 base__noBorder" style={{ height : "100%" }}>
                         <div className="card-body color__tertiaryText">
                             <center>
-                                <h1>- El futuro en RRHH con Inteligencia Artificial -</h1>
+                                <h1 style={{ color : "#b30049" }}>- El futuro en RRHH con Inteligencia Artificial -</h1>
                             </center>
                         </div>
                     </div>
@@ -83,23 +89,22 @@ const Productos = () =>
 
               </div>
 
-                <div className="row mt-5 mb-5">
+                <div className="row mt-3 mb-5">
                   
-                  <div className="col-md-6 base__alingCenter p-4" id="colInfografiaRose1">
+                  <div className="col-md-6 base__alingCenterColum p-5 text-center product__borderR" id="colInfografiaRose1">
 
-                    <div className="base__alingCenterColum base_ml5">
-                      <p><i className="far fa-dot-circle" style={{ color : "#b30049" }}></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean facilisis at erat id ultrices.</p>
-                      <p className="mt-5"><i className="far fa-dot-circle" style={{ color : "#b30049" }}></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean facilisis at erat id ultrices.</p>
-                    </div>
-
-                    <img loading="lazy" className="base__pointer base_ml5" onClick={handleRedirectRose} src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1619040169/Landing%20test%20sources/roseRobot_l0zx5n.png" style={{ width : "30%" }} alt="robEose" />
-                   
+                    <img src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1619119205/Landing%20test%20sources/rose_logo_vector_lfxys9.png" alt="logoRose" style={{ width : "20%", marginLeft : "-5%"}}/>
+                    <img loading="lazy" className="base__pointer mt-4" onClick={handleRedirectRose} src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1619117056/Landing%20test%20sources/robroseTestAffter_pfg8vh.gif" style={{ width : "40%" }} alt="robEose" />
+                    <p className="mt-3" style={{ color : "#024657", fontSize : "1.2rem" }}> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean facilisis at erat id ultrices.</p>
+                    
                   </div>
 
-                  <div className="col-md-6 base__alingCenter" id="colInfografiaRose2">
-                  
+                  <div className="col-md-6 base__alingCenterColum text-center product__borderL" id="colInfografiaRose2">
+
+                  <img src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1619119205/Landing%20test%20sources/rose_logo_vector_lfxys9.png" alt="logoRose" style={{ width : "20%" }}/>
                     <a id="linkRose" href="https://myfuture.ai/rose/" target="_blank" rel="noreferrer" hidden>asdsad</a>
-                    <img loading="lazy" className="base__pointer" onClick={handleRedirectRose} src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1619042681/Landing%20test%20sources/inforose3_h5iyge.png" style={{ width : "80%" }} alt="infoRose" />
+                    <img loading="lazy" className="base__pointer mt-4" onClick={handleRedirectRose} src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1619191868/Landing%20test%20sources/inforose3_u3jfik.png" style={{ width : "80%" }} alt="infoRose" />
+                    <p className="mt-4" style={{ color : "#b30049", fontSize : "1.2rem" }}> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean facilisis at erat id ultrices.</p>
                   
                   </div>
                   

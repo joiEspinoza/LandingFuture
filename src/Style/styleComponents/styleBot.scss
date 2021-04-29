@@ -1,0 +1,16 @@
+.bot__box
+{
+    width: 60px;
+    height: 60px;
+    background-color: brown;
+    position: fixed !important;
+    left: 95%;
+    top:68%;
+    border-radius: 200px 200px 200px 200px;
+    -moz-border-radius: 200px 200px 200px 200px;
+    -webkit-border-radius: 200px 200px 200px 200px;
+    border: 1px solid white;
+    z-index: 10;
+    padding: 0.1rem;
+
+}

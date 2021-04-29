@@ -12,25 +12,26 @@ const Infografia = () =>
         const rowInfografia = document.getElementById("rowInfografia");
         const cardInfo = document.getElementById("cardInfo");
 
-
-        let posicionRowInfografia = rowInfografia.getBoundingClientRect().top;
-
-        if( posicionRowInfografia.toFixed(2) <= 802.15 && posicionRowInfografia.toFixed(2) >= -542.65 )
+        if( rowInfografia && cardInfo )
         {
-            cardInfo.classList.add("animate__animated");
-            cardInfo.classList.add("animate__fadeIn");
-            cardInfo.classList.add("animate__delay-1s");
-            
-        }
-        else
-        {
-            cardInfo.classList.remove("animate__animated");
-            cardInfo.classList.remove("animate__fadeIn");
-            cardInfo.classList.remove("animate__delay-1s");
+            let posicionRowInfografia = rowInfografia.getBoundingClientRect().top;
 
+            if( posicionRowInfografia.toFixed(2) <= 802.15 && posicionRowInfografia.toFixed(2) >= -542.65 )
+            {
+                cardInfo.classList.add("animate__animated");
+                cardInfo.classList.add("animate__fadeIn");
+                cardInfo.classList.add("animate__delay-1s");
+                
+            }
+            else
+            {
+                cardInfo.classList.remove("animate__animated");
+                cardInfo.classList.remove("animate__fadeIn");
+                cardInfo.classList.remove("animate__delay-1s");
+
+            };
         };
-      
-    
+        
     });
 
 ///////////////////////////************************************************////////////////////////

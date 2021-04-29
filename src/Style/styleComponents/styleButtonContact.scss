@@ -3,8 +3,82 @@
     position: fixed !important;
     left: 97%;
     top:30%;
-    height: 14rem;
+    height: auto;
     width: 2.5rem;
-    font-size: 0.8rem;
+    font-size: 1rem;
     z-index: 100;
+    padding: 1.5rem 1rem 1.5rem 0.5rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
 }
+
+.btnLetter
+{
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+}
+
+/* Modal */
+.ReactModalPortal > div
+{
+    opacity: 0;
+}
+
+
+.ReactModalPortal .ReactModal__Overlay 
+{
+    background-color: black;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    transition: opacity .2s ease-in-out;
+    z-index: 999;
+}
+
+
+.modal-fondo /*Custome*/
+{
+    background-color: rgba(0, 0, 0, 0.3);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    position: fixed;
+}
+
+
+.ReactModalPortal .ReactModal__Overlay--after-open 
+{
+    opacity: 1;
+}
+
+
+.ReactModalPortal .ReactModal__Overlay--before-close 
+{
+    opacity: 0;
+}
+
+
+.modal 
+{
+    background: white;
+    border-radius: 8px;
+    color: rgb(51, 51, 51);
+    display: inline;
+    height: auto;
+    max-height: 700px;
+    max-width: 500px;
+    outline: none;
+    padding: 10px;
+    border: 0px solid black;
+    opacity: 1 !important;
+    padding: 2rem !important;
+    overflow: auto;
+}
+
+
+.ReactModal__Overlay
+{
+    background-color: rgba(0, 0, 0, 0.75) !important;
+}
+

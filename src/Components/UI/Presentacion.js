@@ -33,7 +33,7 @@ const Presentacion = () =>
 
         setNumText( numText + 1 );
 
-        if(numText >= 3)
+        if(numText >= 2)
         {
             setNumText( 0 );
         };
@@ -48,17 +48,13 @@ const Presentacion = () =>
 
         if( num === 0 )
         {
-            setText( "Líderes en" );
+            setText( "Innovación en" );
         }
         else if( num === 1 )
         {
-            setText( "Innovación en" );
-        }
-        else if( num === 2 )
-        {
             setText( "Ética en" );
         }
-        else if( num === 3 )
+        else if( num === 2 )
         {
             setText( "Transparencia en" );
         };
@@ -66,7 +62,7 @@ const Presentacion = () =>
         const dinamicText = document.getElementById( "dinamicText" );
         if( dinamicText )
         {
-            if(num === 1 || num === 3)
+            if( num === 1 )
             {
                 dinamicText.classList.add("color__secundaryText");
             }
@@ -110,17 +106,17 @@ const Presentacion = () =>
                         </div>
 
                         <div className="pres__boxText" style={{ marginTop : "4rem" }}>
-                            <h4 className="card-title"><i className="fas fa-microchip color__secundaryText"></i> Procesos de principio a fin.</h4> 
+                            <h4 className="card-title"><i className="fas fa-microchip"></i> Procesos de principio a fin.</h4> 
                         </div>
 
 
                         <div className="pres__boxText">
-                            <h4 className="card-title"><i className="fas fa-microchip color__secundaryText"></i> IA Machine Learning customizado y explicado para ti.</h4>
+                            <h4 className="card-title"><i className="fas fa-microchip"></i> IA Machine Learning customizado y explicado para ti.</h4>
                         </div>
 
 
                         <div className="pres__boxText">
-                            <h4 className="card-title"><i className="fas fa-microchip color__secundaryText"></i> Desarrollo de Softwares con UI o Serverless.</h4>
+                            <h4 className="card-title"><i className="fas fa-microchip"></i> Desarrollo de Softwares con UI o Serverless.</h4>
                         </div>
 
                         <button id="btnPlus" hidden onClick={handlePlus} >click</button>

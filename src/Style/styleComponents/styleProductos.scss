@@ -5,3 +5,25 @@
     background-color: aquamarine;
     margin-left: 1rem;
 }
+
+.product__shadow
+{
+    border-radius: 18px 18px 18px 18px;
+    -moz-border-radius: 18px 18px 18px 18px;
+    -webkit-border-radius: 18px 18px 18px 18px;
+    border: 0px solid #000000;
+    -webkit-box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.75);
+}
+
+.product__borderR
+{
+    border-right: 1px dashed #024657 !important;
+}
+
+
+.product__borderL
+{
+    border-left: 1px dashed #024657 !important;
+}
