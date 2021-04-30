@@ -6,13 +6,13 @@ import { Editor } from 'react-draft-wysiwyg';
 //////<<<<<------------------------------------------------``
 
 
-const MyEditor = ( { setEditorState,editorState } ) => 
+const MyEditor = ( { setEditorState,editorState, wrapperClass = "", editorClass = "", toolbarClass = ""  } ) => 
 {
 
 
-  const onEditorStateChange = (editorState) => 
+  const onEditorStateChange = ( editorState ) => 
   {
-      setEditorState(editorState);
+      setEditorState( editorState );
   };
 
 
@@ -21,10 +21,11 @@ const MyEditor = ( { setEditorState,editorState } ) =>
     <div>
 
       <Editor 
-        editorState={editorState}
-        wrapperClassName="rich-editor demo-wrapper"
-        editorClassName="demo-editor"
+        editorState={ editorState }
+        wrapperClassName={ wrapperClass }
+        editorClassName={ editorClass }
         onEditorStateChange={onEditorStateChange}
+        toolbarClassName={ toolbarClass }
         placeholder="Escriba aquí" 
       />
 

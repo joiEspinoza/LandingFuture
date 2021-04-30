@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import { startLoadBlogs } from '../Actions/blogActions';
@@ -8,6 +8,7 @@ import Blog from '../Components/layout/Blog';
 import BlogView from '../Components/layout/BlogView';
 import Home from '../Components/layout/Home';
 import Footer from '../Components/UI/Footer';
+import Loading from '../Components/UI/Loading';
 import NavBar from '../Components/UI/NavBar';
 import PrivateRoute from './PrivateRoute';
 import PublicRoute from './PublicRoute';
@@ -29,6 +30,16 @@ const RouterApp = () =>
 
     }, [ dispatch ])
 
+    const [ load, setLoad ] = useState( false )
+
+
+ 
+    setTimeout(() => 
+    {
+        setLoad( true );
+
+    }, 3000 );
+   
 
 ///////////////////////////************************////////////////////////
 
@@ -39,11 +50,11 @@ const RouterApp = () =>
             
             <div>
                 
-                <NavBar/>
+                { load && <NavBar/>}
 
                 <Switch>
                 
-                    <Route exact path="/" component={ Home }/>
+                    <Route exact path="/" component={ load ? Home : Loading }/>
 
                     <PublicRoute isLoggedIn={ logged } exact path="/login" component={ Login }/>
 
@@ -57,7 +68,7 @@ const RouterApp = () =>
  
                 </Switch>
 
-                { !activeBot &&  <Footer/> }
+                { ( !activeBot && load )  && <Footer/> }
                
             
             </div>

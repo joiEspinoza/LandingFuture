@@ -18,20 +18,27 @@ const FooterBot = () =>
 
     const { talk } = useSelector( state => state.bot )
     const initFormValue = { human : "" }
-    const [ formValues, handleInputChange ] = useForm( initFormValue );
+    const [ formValues, handleInputChange, reset ] = useForm( initFormValue );
     const { human } = formValues;
     const handleChat = ( event ) =>
     {   
        
         event.preventDefault();
-    
+        
+        if( human === "" )
+        {
+            return;
+        };
+
         talk.push( "human@"+human );
         dispatch( setTalkBot( talk ) )
 
-        document.getElementById( "chatBot" ).scrollTo({
+        document.getElementById( "chatBotBody" ).scrollTo({
             top: 10000000000000,
             behavior: 'smooth',
         })
+
+        reset();
 
     };
 
@@ -42,13 +49,31 @@ const FooterBot = () =>
     };
 
 
+    const chatEnter = ( event ) =>
+    {
+      
+        if( event.keyCode === 13 )
+        {
+            const btnChatBot = document.getElementById( "btnChatBot" );
+
+            if( btnChatBot )
+            {
+                btnChatBot.click();
+            };
+        };
+        
+    };
+  
+    window.onkeydown = chatEnter;
+
+
 ///////////////////////////************************////////////////////////
 
 
     return (
         
         <div className="row UI__footer2 color__tertiaryBg color__primaryText p-3 animate__animated animate__fadeInUp">
-            
+
         <div className="col-md-4 p-4 ">
 
             <div className="row mt-2">
@@ -88,7 +113,7 @@ const FooterBot = () =>
             </div>
 
             <div className="row mt-3">
-                <center className="mb-3"><p>Células agiles</p></center>
+                <center className="mb-3"><p>Tecnologías</p></center>
                 <div className="col-md-3 ">
 
                     <div className="footer__cell" data-toggle="tooltip" data-placement="top" title="Computer vision">
@@ -100,7 +125,7 @@ const FooterBot = () =>
                 <div className="col-md-3">
 
                     <div className="footer__cell" data-toggle="tooltip" data-placement="top" title="NLP">
-                        <img src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1619656625/Landing%20test%20sources/cellstatic/nlp_y6yqc5.png" alt="celFooterr" style={{ width : "100%" }}/>
+                        <img src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1619705896/Landing%20test%20sources/cellstatic/nlp_niurrg.png" alt="celFooterr" style={{ width : "100%" }}/>
                     </div>
 
                 </div>
@@ -108,7 +133,7 @@ const FooterBot = () =>
                 <div className="col-md-3">
 
                     <div className="footer__cell" data-toggle="tooltip" data-placement="top" title="Video Analytics">
-                        <img src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1619656625/Landing%20test%20sources/cellstatic/VIDEO_jyepot.png" alt="celFooterr" style={{ width : "100%" }}/>
+                        <img src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1619705896/Landing%20test%20sources/cellstatic/VIDEO_ydw4ap.png" alt="celFooterr" style={{ width : "100%" }}/>
                     </div>
 
                 </div>
@@ -116,7 +141,7 @@ const FooterBot = () =>
                 <div className="col-md-3">
 
                     <div className="footer__cell" data-toggle="tooltip" data-placement="top" title="Forecasting ">
-                        <img src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1619657303/Landing%20test%20sources/cellstatic/forecasting_xnmb1v.png" alt="celFooterr" style={{ width : "100%" }}/>
+                        <img src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1619705896/Landing%20test%20sources/cellstatic/forecasting_nrv2q0.png" alt="celFooterr" style={{ width : "100%" }}/>
                     </div>
 
                 </div>
@@ -148,23 +173,24 @@ const FooterBot = () =>
                     <div className="footer__boxBot mt-2">
 
   
-                        <div className="footer__chatBox" id="chatBot">
+                        <div className="footer__chatBox">
 
                             <div className="footer__HeaderBot base__alingLine">
 
-                                <div onClick={ ()=>{ handleClearTalk(); handleActivate(); } } className="footer_boxImg" style={{ marginRight : "1rem" }} >
+                                <div className="footer_boxImg" style={{ marginRight : "1rem" }} >
 
                                     <img src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1619659670/Landing%20test%20sources/bottest2_swqr6n.gif" alt="bot" style={{ width : "100%" }} />
 
                                 </div>
 
                                 <p>Bot<br/><small style={{ fontSize : "0.8rem" }}><i className="fas fa-circle" style={{ color : "green" }}></i> Online</small></p>
-
+                                
                             
                             </div>
                             
-                            
-                            <div className="row">
+                            <div id="chatBotBody" className="footer__bodyBot">
+                                
+                                <div className="row">
 
                                 
                                 {
@@ -182,30 +208,28 @@ const FooterBot = () =>
                                 }
 
 
-                            </div>
-
-                        </div>
-
-                     
+                                </div>
                             
-                            <div className="form-group mt-3">
+                            </div>
+                            
+                            <div className="footer__footerBot mt-2">
                                 
                                 <div className="input-group">
                                     
-                                    <input type="text" className="form-control" name="human" autoComplete="off" value={ human } onChange={ handleInputChange }/>
+                                    <input type="text" className="form-control footer__inputChatBot" name="human" autoComplete="off" value={ human } onChange={ handleInputChange }/>
                                     
                                     <div className="input-group-append">
-                                        <button onClick={ handleChat } className="btn btn-primary color__tertiaryBg footer__btnChat"><i className="fas fa-paper-plane"></i></button>
+                                        <button id="btnChatBot" onClick={ handleChat } className="btn btn-primary footer__btnChat"><i className="fas fa-paper-plane color__tertiaryText"></i></button>
                                     </div>
-                                
+                                    
                                 </div>
-                        
-                            </div>
-                            
-                   
 
+                            </div>
+                           
 
                         </div>
+
+                    </div>
                 
                 </div>
                     
@@ -217,21 +241,23 @@ const FooterBot = () =>
 
             <div className="row">
                 
-                <div className="col-md-12 mt-5 base__alingCenterColum">
+                <div className="col-md-12 mt-4 base__alingCenterColum">
                                 
-                    <div className="footer__boxGif mt-5">
+                    <div className="footer__boxGif base__alingCenter">
 
-                     <img className="img-fluid" src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1619637273/Landing%20test%20sources/tenor_gcledc.gif" alt="gif" style={{ width : "100%", height : "100%" }}/>
+                     <img className="img-fluid" src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1619708728/Landing%20test%20sources/cellstatic/blackscreen_mvjjk6.gif" alt="gif" style={{ width : "auto", height : "95%" }} />
 
                     </div>
+
+                    <button onClick={ ()=>{ handleClearTalk(); handleActivate(); } } className="mt-3 btn btn-primary color__primaryBg color__tertiaryText">Cerrar Bot</button>
                     
                 </div>
 
-                <div className="col-md-12 base__alingCenterColum" style={{ marginTop : "4rem" }}>
+                <div className="col-md-12 base__alingCenterColum" style={{ marginTop : "1rem" }}>
 
                     <p><b>Síguenos</b></p>
                 
-                    <div className="base__alingCenterRow mt-2" style={{ fontSize : "2rem" }}>
+                    <div className="base__alingCenterRow" style={{ fontSize : "2rem" }}>
                     
                         <a href="https://www.linkedin.com/company/futureai/" target="_blank" rel="noreferrer"><i className="fab fa-linkedin"></i></a>
                         <a href="https://twitter.com/myfuture_ai" target="_blank" className="footer__marginRS" rel="noreferrer"><i className="fab fa-twitter-square"></i></a>

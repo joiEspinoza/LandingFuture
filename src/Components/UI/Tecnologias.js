@@ -62,28 +62,73 @@ const Tecnologias = () =>
             <div className="col-md-12 p-4">
                 
                 <Slider {...settings}>
-            
+
+
                     <div className="tecno__boxLogos">
-                        <center><img className="tecno__dockerLogo" src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1618843505/Landing%20test%20sources/logos/docker_x5xifk.png" alt="dockerLogo" /></center>
+                        <center><img className="tecno__reactLogo" src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1619716656/Landing%20test%20sources/logos/keras_jjlcjl.png" alt="kerasLogo" /></center>
                     </div>
-                    
+
+
                     <div className="tecno__boxLogos">
-                        <center><img className="tecno__awsLogo" src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1618843505/Landing%20test%20sources/logos/aws_pn5ogm.png" alt="awsLogo" /></center>
+                        <center><img className="tecno__reactLogo" src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1619716657/Landing%20test%20sources/logos/SpaCy_logo_mus5zt.png" alt="spacyLogo" /></center>
                     </div>
-                    
+
+
                     <div className="tecno__boxLogos">
                         <center><img className="tecno__tfLogo" src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1618843505/Landing%20test%20sources/logos/tenso_gg4tz4.png" alt="tfLogo" /></center>
                     </div>
-                    
+
+
+                    <div className="tecno__boxLogos">
+                        <center><img className="tecno__reactLogo" src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1619716656/Landing%20test%20sources/logos/Rasa_nlu_horizontal_purple_g1scsa.png" alt="rasaLogo" /></center>
+                    </div>
+
+
+                    <div className="tecno__boxLogos">
+                        <center><img className="tecno__reactLogo2" src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1618843505/Landing%20test%20sources/logos/react_ksrx5b.png" alt="ReactLogo" /></center>
+                    </div>
+
+
+                    <div className="tecno__boxLogos">
+                        <center><img className="tecno__reactLogo" src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1619716657/Landing%20test%20sources/logos/django_csisew.png" alt="dJangoLogo" /></center>
+                    </div>
+
+
+                    <div className="tecno__boxLogos">
+                        <center><img className="tecno__swaggerLogo" src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1619716657/Landing%20test%20sources/logos/swagger_ela5bn.png" alt="swaggerLogo" /></center>
+                    </div>
+
+
                     <div className="tecno__boxLogos">
                         <center><img className="tecno__pythonLogo" src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1618843505/Landing%20test%20sources/logos/python_awkfti.png" alt="pythonLogo" /></center>
                     </div>
 
+
                     <div className="tecno__boxLogos">
-                        <center><img className="tecno__reactLogo" src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1618843505/Landing%20test%20sources/logos/react_ksrx5b.png" alt="reactLogo" /></center>
+                        <center><img className="tecno__ngnxLogo" src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1619716656/Landing%20test%20sources/logos/nginx_iyyzk4.png" alt="ngnxLogo" /></center>
                     </div>
-                   
+
+
+                    <div className="tecno__boxLogos">
+                        <center><img className="tecno__dockerLogo" src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1618843505/Landing%20test%20sources/logos/docker_x5xifk.png" alt="dockerLogo" /></center>
+                    </div>
                     
+
+                    <div className="tecno__boxLogos">
+                        <center><img className="tecno__awsLogo" src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1618843505/Landing%20test%20sources/logos/aws_pn5ogm.png" alt="awsLogo" /></center>
+                    </div>
+                    
+
+                    <div className="tecno__boxLogos">
+                        <center><img className="tecno__gooleClLogo" src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1619745779/Landing%20test%20sources/logos/google-partner_vgszr2.png" alt="googleLogo" /></center>
+                    </div>
+
+                    
+                    <div className="tecno__boxLogos">
+                        <center><img className="tecno__MicrosoftLogo" src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1619716657/Landing%20test%20sources/logos/microsoft_w3gfso.png" alt="microsoftLogo" /></center>
+                    </div>
+
+
                 </Slider>
             
             </div>

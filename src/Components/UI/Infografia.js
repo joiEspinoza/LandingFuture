@@ -45,7 +45,7 @@ const Infografia = () =>
                 
                 <div id="cardInfo" className="card p-3 mt-4" style={{ width : "auto", height : "100%" }}>
                     
-                    <img loading="lazy" src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1618874108/Landing%20test%20sources/InfografiaBaseAnimation4_jlazil.gif" alt="sw1"/>
+                    <img loading="lazy" src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1619710897/Landing%20test%20sources/cellstatic/InfografiaFuture22222_p7cpel.gif" alt="sw1"/>
                 
                 </div>
             

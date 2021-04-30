@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router';
 import { editOff, startUpdateBlog } from '../../Actions/blogActions';
@@ -78,6 +78,7 @@ const BlogView = () =>
         history.push( "/blog" )
     }
 
+ 
 
 ///////////////////////////************************////////////////////////
 
@@ -88,12 +89,12 @@ const BlogView = () =>
            
             <div className="col-md-12 p-5 base__alingCenterColum">
                 
-                <div className="blog__coverImg" style={{ backgroundImage : `url( ${ url } )` }}>
-                    <h2 className="blog__title">{ title }</h2>
+                <div className="blog__coverImg p-1" style={{ backgroundImage : `url( ${ url } )` }}>
+                    <h3 className="blog__title">{ title.toUpperCase() }</h3>
                 </div>
                 
-                <div className="form-group mt-3">
-                    <textarea rows="4" cols="50" className="blog__textArea" placeholder="textBody" name="textBody" disabled  value={ descriptionHTML } onChange={ handleInputChange } style={{ height : "auto" }}></textarea>
+                <div className="form-group mt-5">
+                    <Editor wrapperClass={ "blog__editorWrapper" } toolbarClass={ "blog__toolbarClass" } editorState={ editorState } setEditorState={ setEditorState }/>
                 </div>
 
                 

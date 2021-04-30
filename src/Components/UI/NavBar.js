@@ -52,6 +52,22 @@ const NavBar = () =>
         dispatch( setActiveBot( false ) );
     }
 
+
+   /*
+    const handleScrollPosition = () =>
+    {
+        let y = window.scrollY;
+        console.log( y );
+    };
+    */
+
+    const scrollTo = ( position ) =>
+    {
+        window.scroll( 0, position )
+    };
+    
+    //window.onscroll = handleScrollPosition;
+
 ///////////////////////////************************////////////////////////
 
 
@@ -76,29 +92,35 @@ const NavBar = () =>
 
                 <div className="col-12 col-md-2 base__alingLine mt-2" style={{ fontSize : "1.1rem" }}>
 
-                    <span className="base__pointer base__marginRight2Rem text-center" style={{ width : "100%" }}>¿Qué hacemos?</span>
+                    <span onClick={ () => { scrollTo( 0 ); } } className="base__pointer base__marginRight2Rem" style={{ width : "100%" }}>¿Qué hacemos?</span>
+
+                </div>
+
+                <div className="col-12 col-md-1 base__alingLine mt-2" style={{ fontSize : "1.1rem" }}>
+
+                    <span onClick={ () => { scrollTo( 670 ); } } className="base__pointer base__marginRight2Rem" style={{ width : "100%" }}>Celulas</span>
 
                 </div>
 
                 <div className="col-12 col-md-2 base__alingLine mt-2" style={{ fontSize : "1.1rem" }}>
 
-                    <span className="base__pointer base__marginRight2Rem text-center" style={{ width : "100%" }}>Exitos</span>
-
-                </div>
-
-                <div className="col-12 col-md-2 base__alingLine mt-2" style={{ fontSize : "1.1rem" }}>
-
-                    <span className="base__pointer base__marginRight2Rem text-center" style={{ width : "100%" }}>Testimonio</span>
+                    <span onClick={ () => { scrollTo( 1330 ); } } className="base__pointer base__marginRight2Rem text-center" style={{ width : "100%" }}>Testimonio</span>
 
                 </div>
 
                 <div className="col-12 col-md-2 base__alingLine  mt-2" style={{ fontSize : "1.1rem" }}>
 
-                    <span className="base__pointer base__marginRight2Rem text-center" style={{ width : "100%" }}>Softwares</span>
+                    <span onClick={ () => { scrollTo( 2150 ); } } className="base__pointer base__marginRight2Rem text-center" style={{ width : "100%" }}>Metodología</span>
 
                 </div>
 
                 <div className="col-12 col-md-2 base__alingLine  mt-2" style={{ fontSize : "1.1rem" }}>
+
+                    <span onClick={ () => { scrollTo( 3050 ); } } className="base__pointer base__marginRight2Rem text-center" style={{ width : "100%" }}>Softwares</span>
+
+                </div>
+
+                <div className="col-12 col-md-1 base__alingLine  mt-2" style={{ fontSize : "1.1rem" }}>
 
                     <span onClick={ ()=>{ handleActivate(); handleBlog(); } } className="base__pointer base__marginRight2Rem text-center" style={{ width : "100%" }}>Blog</span>
                     

@@ -92,13 +92,13 @@ const Presentacion = () =>
 
     return (
         
-        <div className="row UI__precentacion color__tertiaryText pres__BackGround animate__animated animate__fadeIn animate__delay-1s mt-2">
+        <div className="row UI__precentacion color__tertiaryText pres__BackGround animate__animated animate__fadeIn animate__delay-1s mt-5">
             
             <div className="col-12 col-md-6">
     
                 <div className="card base__noBorder animate__animated animate__fadeInLeft animate__delay-2s mt-3" style={{ height : "100%", width : "100%" }}>
                 
-                    <div className="card-body base__alingCenterColum" style={{ marginTop : "-15%" }}>
+                    <div className="card-body base__alingCenterColum">
                         
                         <div className="pres__boxText">
                             <p id="dinamicText" style={{ fontSize : "2rem"}} >{text}</p>

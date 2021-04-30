@@ -80,7 +80,7 @@ const Productos = () =>
                     <div className="card p-3 base__noBorder" style={{ height : "100%" }}>
                         <div className="card-body color__tertiaryText">
                             <center>
-                                <h1 style={{ color : "#b30049" }}>- El futuro en RRHH con Inteligencia Artificial -</h1>
+                                <h1 style={{ color : "#000000" }}>- El futuro en RRHH con Inteligencia Artificial -</h1>
                             </center>
                         </div>
                     </div>
@@ -93,18 +93,18 @@ const Productos = () =>
                   
                   <div className="col-md-6 base__alingCenterColum p-5 text-center product__borderR" id="colInfografiaRose1">
 
-                    <img src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1619119205/Landing%20test%20sources/rose_logo_vector_lfxys9.png" alt="logoRose" style={{ width : "20%", marginLeft : "-5%"}}/>
-                    <img loading="lazy" className="base__pointer mt-4" onClick={handleRedirectRose} src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1619117056/Landing%20test%20sources/robroseTestAffter_pfg8vh.gif" style={{ width : "40%" }} alt="robEose" />
-                    <p className="mt-3" style={{ color : "#024657", fontSize : "1.2rem" }}> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean facilisis at erat id ultrices.</p>
+                    <img src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1619715061/Landing%20test%20sources/cellstatic/PARNERlOGO_mkp5yd.png" alt="logoRose" style={{ width : "20%", marginLeft : "-5%"}}/>
+                    <img loading="lazy" className="base__pointer mt-4" onClick={handleRedirectRose} src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1619714850/Landing%20test%20sources/cellstatic/robroseBN_jfledi.gif" style={{ width : "40%" }} alt="robEose" />
+                    <p className="mt-5" style={{ color : "#000000", fontSize : "1.2rem" }}> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean facilisis at erat id ultrices.</p>
                     
                   </div>
 
                   <div className="col-md-6 base__alingCenterColum text-center product__borderL" id="colInfografiaRose2">
 
-                  <img src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1619119205/Landing%20test%20sources/rose_logo_vector_lfxys9.png" alt="logoRose" style={{ width : "20%" }}/>
+                    <img src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1619715061/Landing%20test%20sources/cellstatic/unifyLogo_qims3q.png" alt="logoRose" style={{ width : "20%" }}/>
                     <a id="linkRose" href="https://myfuture.ai/rose/" target="_blank" rel="noreferrer" hidden>asdsad</a>
-                    <img loading="lazy" className="base__pointer mt-4" onClick={handleRedirectRose} src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1619191868/Landing%20test%20sources/inforose3_u3jfik.png" style={{ width : "80%" }} alt="infoRose" />
-                    <p className="mt-4" style={{ color : "#b30049", fontSize : "1.2rem" }}> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean facilisis at erat id ultrices.</p>
+                    <img loading="lazy" className="base__pointer mt-4" onClick={handleRedirectRose} src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1619712077/Landing%20test%20sources/cellstatic/inforose3bn_tjkyst.png" style={{ width : "80%" }} alt="infoRose" />
+                    <p className="mt-4" style={{ color : "#000000", fontSize : "1.2rem" }}> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean facilisis at erat id ultrices.</p>
                   
                   </div>
                   

@@ -3,9 +3,15 @@ import { BackendConnect } from '../Backend/BackendConnect';
 import { fileUploadCloudinary } from '../Cloudinary/fileUploadCloudinary';
 import { swalMsg } from '../Helper/swalMsg';
 import { types } from '../Types/types';
+import axios from 'axios';
 
 
 //////<<<<<------------------------------------------------``
+
+
+const baseUrl = process.env.REACT_APP_API_BASE_URL;
+const url = `${ baseUrl }/blogs/blogactions/`
+console.log( url )
 
 
 const startLoadBlogs = () =>
@@ -15,10 +21,11 @@ const startLoadBlogs = () =>
 
         try 
         {
-            const request = await BackendConnect( 'blogs/blogactions/', {}, 'GET' );
 
-            const response = await request.json();
-
+            const request = await axios.get( url );
+            
+            const response = request.data;
+  
             if( response.ok )
             {
                 dispatch( loadBlogs( response.blogs ) );
@@ -26,9 +33,10 @@ const startLoadBlogs = () =>
             }
             else
             {
-                Swal.fire( '', swalMsg( response ) , 'error' );
+                Swal.fire( '', "error" , 'error' );
                 return false;  
             };
+     
 
         } 
         catch( error ) 

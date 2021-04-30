@@ -16,12 +16,13 @@
 
 .blog__title
 {
-    color: white;
-    text-align: left;
+    color: black;
+    text-align: justify;
     margin-top: 20%;
-    background-color:black;
+    background-color:white;
     line-height : 3rem;
-    opacity: 0.8;
+    opacity: 0.9;
+    padding: 0.2rem;
 
 }
 
@@ -33,6 +34,7 @@
     -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+    width: 80% !important;
 
     &:hover
     {
@@ -110,6 +112,18 @@
     box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
     padding: 2rem;
     overflow: auto;
+}
+
+
+.blog__toolbarClass
+{
+    visibility: hidden !important;
+}
+
+
+.blog__editorWrapper 
+{
+    pointer-events: none !important;
 }
 
 

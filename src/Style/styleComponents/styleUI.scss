@@ -2,6 +2,9 @@
 {
     height: 10%;
     width: 100vw;
+    position: fixed;
+    top : 0;
+    z-index: 10;
     //background-color: transparent !important;
 
 }
@@ -82,6 +85,12 @@
 {
     height: 90vh;
     width: 100vw;
+}
+
+
+.UI__blog
+{
+    min-height: 90vh;
 }
 
 

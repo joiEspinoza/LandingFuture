@@ -111,6 +111,17 @@
     overflow: auto !important;
  }
  
+
+ .base__closeSpace
+ {
+   width: 100vw;
+   height: 50vh;
+   background-color: transparent;
+   position: fixed;
+   z-index: 9;
+
+ }
+
 /**********************************************************************************/
 
 
