@@ -106,19 +106,19 @@ const NavBar = () =>
 
                 <div className="col-12 col-md-2 base__alingLine mt-2 base__hiddenResponse" style={{ fontSize : "1.1rem" }}>
 
-                    <span onClick={ () => { scrollTo( 1330 ); } } className="base__pointer base__marginRight2Rem text-center mt-3" style={{ width : "100%" }}>Testimonio</span>
+                    <span onClick={ () => { scrollTo( 1450 ); } } className="base__pointer base__marginRight2Rem text-center mt-3" style={{ width : "100%" }}>Testimonio</span>
 
                 </div>
 
                 <div className="col-12 col-md-2 base__alingLine  mt-2 base__hiddenResponse" style={{ fontSize : "1.1rem" }}>
 
-                    <span onClick={ () => { scrollTo( 2150 ); } } className="base__pointer base__marginRight2Rem text-center mt-3" style={{ width : "100%" }}>Metodología</span>
+                    <span onClick={ () => { scrollTo( 2200 ); } } className="base__pointer base__marginRight2Rem text-center mt-3" style={{ width : "100%" }}>Metodología</span>
 
                 </div>
 
                 <div className="col-12 col-md-2 base__alingLine  mt-2 base__hiddenResponse" style={{ fontSize : "1.1rem" }}>
 
-                    <span onClick={ () => { scrollTo( 3050 ); } } className="base__pointer base__marginRight2Rem text-center mt-3" style={{ width : "100%" }}>Softwares</span>
+                    <span onClick={ () => { scrollTo( 2900 ); } } className="base__pointer base__marginRight2Rem text-center mt-3" style={{ width : "100%" }}>Softwares</span>
 
                 </div>
 

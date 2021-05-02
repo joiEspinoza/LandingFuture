@@ -56,13 +56,13 @@ const RouterApp = () =>
                 
                     <Route exact path="/" component={ load ? Home : Loading }/>
 
-                    <PublicRoute isLoggedIn={ logged } exact path="/login" component={ Login }/>
+                    <PublicRoute isLoggedIn={ logged } exact path="/login" component={  load ? Login : Loading }/>
 
-                    <PrivateRoute isLoggedIn={ logged } exact path="/admin" component={ Admin }/>
+                    <PrivateRoute isLoggedIn={ logged } exact path="/admin" component={ load ? Admin : Loading }/>
 
-                    <Route isLoggedIn={ logged } exact path="/blog" component={ Blog }/>
+                    <Route isLoggedIn={ logged } exact path="/blog" component={ load ? Blog : Loading }/>
 
-                    <Route isLoggedIn={ logged } exact path="/blogview" component={ BlogView }/>
+                    <Route isLoggedIn={ logged } exact path="/blogview" component={ load ? BlogView : Loading  }/>
 
                     <Redirect to="/"/>
  
