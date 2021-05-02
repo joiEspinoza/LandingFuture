@@ -171,7 +171,7 @@ const BotonContact = () =>
         
         <>
 
-            <button onClick={ openModal } id="btnContact" className="btn__btnBaseContact btn color__primaryText color__tertiaryBg"><div className="btnLetter">Contactanos <i className="fas fa-rocket"></i></div></button>
+            <button onClick={ openModal } id="btnContact" className="btn__btnBaseContact btn color__primaryText color__tertiaryBg"><div className="btnLetter">Contactanos <i className="fas fa-rocket base__hiddenResponse"></i></div></button>
             
             <Modal
             

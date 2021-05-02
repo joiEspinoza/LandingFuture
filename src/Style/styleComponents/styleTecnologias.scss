@@ -66,3 +66,28 @@
     width: 20%;
     margin-top: 0rem;
 }
+
+
+/********************************************************************************************/
+
+
+@media only screen and (max-width: 767px) 
+  {
+
+    .tecno__responseLogo
+    {
+        width: 30% !important;
+    }
+
+    .tecno__responseLogoAws
+    {
+        width: 10% !important;
+    }
+
+    .tecno_responseMarginTopSlider
+    {
+        margin-top: 2rem !important;
+    }
+
+  }
+

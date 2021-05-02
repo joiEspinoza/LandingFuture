@@ -1,0 +1,39 @@
+.loading__mt
+{
+    margin-top: 20%;
+}
+
+
+.loading__img
+{
+    width: 7rem;
+    height: 9rem;
+}
+
+
+@media only screen and (max-width: 767px)
+{
+
+    .loading__mt
+    {
+        margin-top: 60% !important;
+    }
+
+
+    .loading__img
+    {
+        width: 5rem;
+        height: 6rem;
+    }
+}
+
+
+@media only screen and (max-width: 414px)
+{
+
+    .loading__mt
+    {
+        margin-top: 70% !important;
+    }
+
+}

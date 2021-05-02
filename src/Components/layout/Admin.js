@@ -57,7 +57,7 @@ const Admin = () =>
 
     return (
         
-        <div className="row UI__admin mt-5">
+        <div className="row UI__admin">
            
             <div className="col-md-12 base__alingCenterColum">
             

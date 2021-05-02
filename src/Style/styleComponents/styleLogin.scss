@@ -12,3 +12,31 @@
     height: 40vh;
     padding-top: 4.4rem;
 }
+
+
+/***********************************************************************************/
+
+
+@media only screen and (max-width: 767px) 
+{
+
+    .login__boxLogin
+    {
+        width: 60vw !important;
+        margin-top: 8rem !important;
+    }
+
+}
+
+
+@media only screen and (max-width: 414px)
+{
+
+    .login__boxLogin
+    {
+        width: 85vw !important;
+        margin-top: 8rem !important;
+        margin-left: 1.2rem !important;
+    }
+
+}

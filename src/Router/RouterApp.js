@@ -33,12 +33,12 @@ const RouterApp = () =>
     const [ load, setLoad ] = useState( false )
 
 
- 
     setTimeout(() => 
     {
         setLoad( true );
 
     }, 3000 );
+ 
    
 
 ///////////////////////////************************////////////////////////

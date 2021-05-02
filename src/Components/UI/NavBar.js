@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useHistory, useLocation } from 'react-router';
 import { logout } from '../../Actions/authActions';
 import { setActiveBot } from '../../Actions/botActions';
+import { useForm } from '../../Hook/useForm';
 
 
 //////<<<<<------------------------------------------------``
@@ -12,15 +13,21 @@ const NavBar = () =>
 {
     const location = useLocation();
     const dispatch = useDispatch();
+    const history = useHistory();
     const { logged } = useSelector( state => state.auth );
 
-    const history = useHistory();
     const handleBlog = () =>
     {
         history.push( "/blog" );
-    };
+    }
 
-
+ 
+    const handleActivate = () =>
+    {
+        dispatch( setActiveBot( false ) );
+    }
+    
+    
     const handleHome = () =>
     {
         if( location.pathname === "/blogview" )
@@ -35,22 +42,17 @@ const NavBar = () =>
     };
 
 
-    const handleAdmin = () =>
+    const handleRedirect = ( urlSelect ) =>
     {
-        history.push( "/admin" );
-    };
+        if( urlSelect === "logout" )
+        {
+            dispatch( logout() );
+        };
 
 
-    const handleLogout = () =>
-    {
-        dispatch( logout() )
-    };
-
-
-    const handleActivate = () =>
-    {
-        dispatch( setActiveBot( false ) );
+        history.push( urlSelect )
     }
+   
 
 
    /*
@@ -76,53 +78,53 @@ const NavBar = () =>
       
         location.pathname === "/" ?
 
-        <nav className="navbar navbar-light UI__nav color__tertiaryBg animate__animated animate__fadeInDown animate__delay-0.5s">
+        <nav className="navbar-light UI__nav color__tertiaryBg animate__animated animate__fadeInDown animate__delay-0.5s nav__response">
         
-            <div className="container-fluid color__primaryText">
+            <div className="row container-fluid color__primaryText">
         
                 <div className="col-12 col-md-2">
                     
                     <div className="nav__boxLogo base__alingCenter">
 
-                        <img className="base__pointer" onClick={ handleHome } src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1618929849/Landing%20test%20sources/logofutureAIWhite_f1kehi.png" alt="logo" style={{ width : "45%"  }} />
+                        <img className="base__pointer nav__logoFuture" onClick={ handleHome } src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1618929849/Landing%20test%20sources/logofutureAIWhite_f1kehi.png" alt="logo" />
 
                     </div>
                 
                 </div>
 
-                <div className="col-12 col-md-2 base__alingLine mt-2" style={{ fontSize : "1.1rem" }}>
+                <div className="col-12 col-md-2 base__alingLine mt-2 base__hiddenResponse" style={{ fontSize : "1.1rem" }}>
 
-                    <span onClick={ () => { scrollTo( 0 ); } } className="base__pointer base__marginRight2Rem" style={{ width : "100%" }}>¿Qué hacemos?</span>
-
-                </div>
-
-                <div className="col-12 col-md-1 base__alingLine mt-2" style={{ fontSize : "1.1rem" }}>
-
-                    <span onClick={ () => { scrollTo( 670 ); } } className="base__pointer base__marginRight2Rem" style={{ width : "100%" }}>Celulas</span>
+                    <span onClick={ () => { scrollTo( 0 ); } } className="base__pointer base__marginRight2Rem mt-3" style={{ width : "100%" }}>¿Qué hacemos?</span>
 
                 </div>
 
-                <div className="col-12 col-md-2 base__alingLine mt-2" style={{ fontSize : "1.1rem" }}>
+                <div className="col-12 col-md-1 base__alingLine mt-2 base__hiddenResponse" style={{ fontSize : "1.1rem" }}>
 
-                    <span onClick={ () => { scrollTo( 1330 ); } } className="base__pointer base__marginRight2Rem text-center" style={{ width : "100%" }}>Testimonio</span>
-
-                </div>
-
-                <div className="col-12 col-md-2 base__alingLine  mt-2" style={{ fontSize : "1.1rem" }}>
-
-                    <span onClick={ () => { scrollTo( 2150 ); } } className="base__pointer base__marginRight2Rem text-center" style={{ width : "100%" }}>Metodología</span>
+                    <span onClick={ () => { scrollTo( 670 ); } } className="base__pointer base__marginRight2Rem mt-3" style={{ width : "100%" }}>Celulas</span>
 
                 </div>
 
-                <div className="col-12 col-md-2 base__alingLine  mt-2" style={{ fontSize : "1.1rem" }}>
+                <div className="col-12 col-md-2 base__alingLine mt-2 base__hiddenResponse" style={{ fontSize : "1.1rem" }}>
 
-                    <span onClick={ () => { scrollTo( 3050 ); } } className="base__pointer base__marginRight2Rem text-center" style={{ width : "100%" }}>Softwares</span>
+                    <span onClick={ () => { scrollTo( 1330 ); } } className="base__pointer base__marginRight2Rem text-center mt-3" style={{ width : "100%" }}>Testimonio</span>
 
                 </div>
 
-                <div className="col-12 col-md-1 base__alingLine  mt-2" style={{ fontSize : "1.1rem" }}>
+                <div className="col-12 col-md-2 base__alingLine  mt-2 base__hiddenResponse" style={{ fontSize : "1.1rem" }}>
 
-                    <span onClick={ ()=>{ handleActivate(); handleBlog(); } } className="base__pointer base__marginRight2Rem text-center" style={{ width : "100%" }}>Blog</span>
+                    <span onClick={ () => { scrollTo( 2150 ); } } className="base__pointer base__marginRight2Rem text-center mt-3" style={{ width : "100%" }}>Metodología</span>
+
+                </div>
+
+                <div className="col-12 col-md-2 base__alingLine  mt-2 base__hiddenResponse" style={{ fontSize : "1.1rem" }}>
+
+                    <span onClick={ () => { scrollTo( 3050 ); } } className="base__pointer base__marginRight2Rem text-center mt-3" style={{ width : "100%" }}>Softwares</span>
+
+                </div>
+
+                <div className="col-12 col-md-1 base__alingLine  mt-2 base__hiddenResponse" style={{ fontSize : "1.1rem" }}>
+
+                    <span onClick={ ()=>{ handleActivate(); handleBlog(); } } className="base__pointer base__marginRight2Rem text-center mt-3" style={{ width : "100%" }}>Blog</span>
                     
                 </div>
 
@@ -132,46 +134,78 @@ const NavBar = () =>
             
         :
 
-        <nav className="navbar navbar-light UI__nav color__tertiaryBg animate__animated animate__fadeInDown animate__delay-0.5s">
+        logged ? 
+        
+        <nav className="nav__navBlog navbar navbar-light UI__nav color__tertiaryBg animate__animated animate__fadeInDown animate__delay-0.5s nav__response">
         
             <div className="container-fluid color__primaryText">
         
-                <div className="col-12 col-md-2">
+                <div className="row">
+                   
+                   <div className="col-md-2">
+
+                        <div className="nav__boxLogo base__alingCenter">
+
+                            <img className="base__pointer nav__logoFuture" onClick={ handleHome } src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1618929849/Landing%20test%20sources/logofutureAIWhite_f1kehi.png" alt="logo" />
+
+                        </div>
+
+                   </div>
+
+                   <div className="col-md-10">
+
+                        <div className="dropdown">
+
+                            <button className="nav__dropdownListBlogs color__tertiaryBg btn btn-primary dropdown-toggle bg-primary text-white" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"></button>
+
+                            <ul className="dropdown-menu nav__dropdownListBlogs" aria-labelledby="dropdownMenuButton1">
+
+                                <l1 className="base__pointer" onClick={ () => { handleRedirect( "/admin" ) } } >Nuevo Blog</l1>
+                                <br/>
+                                <l1 className="base__pointer" onClick={ () => { handleRedirect( "/blog" ) } } >Blogs</l1>
+                                <br/>
+                                <l1 className="base__pointer" onClick={ () => { handleHome(); } } >Volver</l1>
+                                <br/>
+                                <l1 className="base__pointer" onClick={ () => { handleRedirect( "logout" ) } } >Logout</l1>
+                            
+                            </ul>
+                            
+                        </div>
                     
-                    <div className="nav__boxLogo base__alingCenter">
-
-                        <img className="base__pointer" onClick={ handleHome } src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1618929849/Landing%20test%20sources/logofutureAIWhite_f1kehi.png" alt="logo" style={{ width : "45%"  }} />
-
                     </div>
                 
                 </div>
 
-                <div className="col-12 col-md-2 base__alingLine mt-2" style={{ fontSize : "1.1rem" }}>
+            </div>
+        
+        </nav>
+        
+        :
 
-                </div>
-
-                <div className="col-12 col-md-2 base__alingLine mt-2" style={{ fontSize : "1.1rem" }}>
+        <nav className="nav__navBlog navbar navbar-light UI__nav color__tertiaryBg animate__animated animate__fadeInDown animate__delay-0.5s nav__response">
+        
+            <div className="container-fluid color__primaryText">
+        
+    
+                <div className="row">
                 
-                { logged && <span onClick={handleBlog} className="base__pointer base__marginRight2Rem text-center" style={{ width : "100%" }}>Blog</span> }
+                <div className="col-md-2">
+
+                        <div className="nav__boxLogo base__alingCenter">
+
+                            <img className="base__pointer nav__logoFuture" onClick={ handleHome } src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1618929849/Landing%20test%20sources/logofutureAIWhite_f1kehi.png" alt="logo" />
+
+                        </div>
 
                 </div>
 
-                <div className="col-12 col-md-2 base__alingLine mt-2" style={{ fontSize : "1.1rem" }}>
 
-                    { logged && <span onClick={ handleAdmin } className="base__pointer base__marginRight2Rem text-center" style={{ width : "100%" }}>Crear Blog</span> }
+                    <div className="col-md-10">
 
-                </div>
-
-                <div className="col-12 col-md-2 base__alingLine  mt-2" style={{ fontSize : "1.1rem" }}>
-
-                    { logged && <span onClick={ handleLogout } className="base__pointer base__marginRight2Rem text-center" style={{ width : "100%" }}>Logout</span> }
-
-                </div>
-
-                <div className="col-12 col-md-2 base__alingLine  mt-2" style={{ fontSize : "1.1rem" }}>
-
-                    <span  onClick={ handleHome } className="base__pointer base__marginRight2Rem text-center" style={{ width : "100%" }}>Volver</span>
-
+                        <button onClick={ handleHome } className="color__tertiaryBg btn btn-primary nav__btnBackLogOff">Volver</button>
+                        
+                    </div>
+                
                 </div>
 
             </div>

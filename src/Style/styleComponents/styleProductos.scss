@@ -6,16 +6,6 @@
     margin-left: 1rem;
 }
 
-.product__shadow
-{
-    border-radius: 18px 18px 18px 18px;
-    -moz-border-radius: 18px 18px 18px 18px;
-    -webkit-border-radius: 18px 18px 18px 18px;
-    border: 0px solid #000000;
-    -webkit-box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.75);
-    box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.75);
-}
 
 .product__borderR
 {
@@ -26,4 +16,108 @@
 .product__borderL
 {
     border-left: 1px dashed black !important;
+}
+
+
+.product__title
+{
+    color: black;
+}
+
+
+.product__logoRosePartner
+{
+    width: 20%;
+    margin-right: 2rem;
+}
+
+
+.product__robPartnerRose
+{
+    width: 35%;
+}
+
+
+.product__uinfyInfografRose
+{
+    width: 80%;
+}
+
+
+.product__uinfyLogoRose
+{
+    width: 15%;
+}
+
+
+.product__card
+{
+    color: black;
+    font-size: 1.2rem;
+    padding: 1rem;
+    width: 80%;
+    -webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
+    border: none !important;
+
+}
+
+
+/**********************************************************************************/
+
+
+@media only screen and (max-width: 767px) 
+{
+
+    .product__borderR
+    {
+        border-right: none !important;
+        border-bottom: 1px dashed black !important;
+    }
+
+    .product__borderL
+    {
+        border-left: none !important;
+        border-top: 1px dashed black !important;
+    }
+
+
+    .product__title
+    {
+        font-size: 1rem !important;
+    }
+
+
+    .product__robPartnerRose
+    {
+        width: 70% !important;
+        margin-left: 10% !important;
+    }
+
+
+    .product__logoRosePartner
+    {
+        width: 40% !important;
+        margin-left: 10% !important;
+    }
+
+
+    .product__pbResponse
+    {
+        padding-bottom: 2rem !important;
+    }
+
+
+    .product__ptResponse
+    {
+        padding-top: 2rem !important;
+    }
+
+
+    .product__uinfyLogoRose
+    {
+        width: 25%;
+    }
+    
 }

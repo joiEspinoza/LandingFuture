@@ -21,7 +21,7 @@ const Bot = () =>
 
     return (
         
-        <div onClick={ handleActivate } className="bot__box base__pointer color__tertiaryBg">
+        <div onClick={ handleActivate } className="bot__box base__pointer color__tertiaryBg base__hiddenResponse">
             <img src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1619658882/Landing%20test%20sources/bottest_ddh7i9.gif" style={{ width : "100%" }} alt="bot" />
         </div>
     )

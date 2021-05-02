@@ -1,10 +1,11 @@
 .UI__nav
 {
-    height: 10%;
-    width: 100vw;
+    height: auto;
+    min-height: 10vh !important;
     position: fixed;
     top : 0;
     z-index: 10;
+    width: 100vw;
     //background-color: transparent !important;
 
 }
@@ -12,7 +13,8 @@
 
 .UI__precentacion
 {
-    height: 80%;
+    height: auto;
+    min-height: 72vh;
     width: 100vw;
     padding: 1rem;
 }
@@ -20,30 +22,30 @@
 
 .UI__tecnologias
 {
-    height: 30%;
-    width: 100vw;
+    min-height: 10vh;
+    height: auto;
 }
 
 
 .UI__celulas
 {
-    height: 100%;
-    width: 100vw;
+    height: auto;
+    min-height: 100vh;
     background-color: $tertiary;
 }
 
 
 .UI__testimonios
 {
-    height: 200%;
-    width: 100vw;
+    height: auto;
+    min-height: 100vh;
 }
 
 
 .UI__infografia
 {
-    height: 100%;
-    width: 100vw;
+    height: auto;
+    min-height: 100vh;
     background-color: $tertiary;
 
 }
@@ -51,16 +53,15 @@
 
 .UI__Productos
 {
-    height: 50%;
-    width: 100vw;
-
+    min-height: 80vh;
+    height: auto;
 }
 
 
 .UI__footer
 {
     height: auto;
-    width: 100vw;
+    min-height: 20vh;
 }
 
 
@@ -91,7 +92,27 @@
 .UI__blog
 {
     min-height: 90vh;
+    height: auto;
+    margin-top: 0.5rem !important;
 }
+
+
+.UI__blogView
+{
+    min-height: 90vh;
+    height: auto;
+    margin-top: 0.5rem !important;
+}
+
+
+.UI__admin
+{
+    min-height: 90vh;
+    height: auto;
+}
+
+
+/******************************************************************************************/
 
 
 @media only screen and (max-width: 767px) 
@@ -99,10 +120,52 @@
 
     .UI__nav
     {
-    
-        height: auto !important;
+  
+        position: absolute !important;
+        padding-bottom: 1.5rem !important;
 
     }
 
+    .UI__blog
+    {
+
+        margin-top: 6rem !important;
+    }
+
+
+    .UI__blogView
+    {
+        margin-top: 4rem !important;
+    }
+
+
+    .UI__admin
+    {
+        margin-top: 10rem !important;
+    }
+
+
+}
+
+
+@media only screen and (max-width: 414px)
+{
+
+    .UI__blog
+    {
+
+        margin-top: 10rem !important;
+    }
+
+    .UI__blogView
+    {
+        margin-top: 6rem !important;
+    }
+
+
+    .UI__admin
+    {
+        margin-top: 20rem !important;
+    }
 
 }

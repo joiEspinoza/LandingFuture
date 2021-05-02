@@ -18,11 +18,10 @@
 {
     color: black;
     text-align: justify;
-    margin-top: 20%;
-    background-color:white;
     line-height : 3rem;
-    opacity: 0.9;
-    padding: 0.2rem;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 3%;
 
 }
 
@@ -125,5 +124,45 @@
 {
     pointer-events: none !important;
 }
+
+
+/***********************************************************************************************/
+
+
+@media only screen and (max-width: 767px) 
+{
+
+    .blog__title
+    {
+
+        font-size: 1rem !important;
+        margin-top: 2rem !important;
+        margin-bottom: 2rem !important;
+        line-height : 1.3rem !important;
+
+    }
+
+    .blog__boxBodyText
+    {
+        margin-top: -40% !important;
+    }
+
+
+}
+
+
+@media only screen and (max-width: 414px)
+{
+    .blog__boxBodyText
+    {
+        margin-top: -110% !important;
+    }
+
+}
+
+
+
+
+
 
 

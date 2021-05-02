@@ -22,7 +22,7 @@ const Presentacion = () =>
         const dinamicText = document.getElementById( "dinamicText" );
         if( dinamicText )
         {
-            dinamicText.classList.add("typing");
+            dinamicText.classList.add( "typing" );
         };
         
     };
@@ -77,16 +77,11 @@ const Presentacion = () =>
 
     useEffect(() => 
     {
-       setInterval( handleClick, 3000 ); 
+       setInterval( handleClick, 3100 ); 
 
     }, [])
 
     
-
-   
-    
-
-
 ///////////////////////////************************************************////////////////////////
 
 
@@ -101,22 +96,22 @@ const Presentacion = () =>
                     <div className="card-body base__alingCenterColum">
                         
                         <div className="pres__boxText">
-                            <p id="dinamicText" style={{ fontSize : "2rem"}} >{text}</p>
-                            <h1>Inteligencia Artificial</h1>
+                            <p id="dinamicText" className="pres__dianmicTextResponse" style={{ fontSize : "2rem"}} >{text}</p>
+                            <h1 className="pres__textResponse">Inteligencia Artificial</h1>
                         </div>
 
-                        <div className="pres__boxText" style={{ marginTop : "4rem" }}>
-                            <h4 className="card-title"><i className="fas fa-microchip"></i> Procesos de principio a fin.</h4> 
-                        </div>
-
-
-                        <div className="pres__boxText">
-                            <h4 className="card-title"><i className="fas fa-microchip"></i> IA Machine Learning customizado y explicado para ti.</h4>
+                        <div className="pres__boxText pres__marginTop pres__marginTopTitleText">
+                            <h4 className="card-title pres__titlesResponse"><i className="fas fa-microchip"></i> Procesos de principio a fin.</h4> 
                         </div>
 
 
-                        <div className="pres__boxText">
-                            <h4 className="card-title"><i className="fas fa-microchip"></i> Desarrollo de Softwares con UI o Serverless.</h4>
+                        <div className="pres__boxText pres__marginTop">
+                            <h4 className="card-title pres__titlesResponse"><i className="fas fa-microchip"></i> IA Machine Learning customizado y explicado para ti.</h4>
+                        </div>
+
+
+                        <div className="pres__boxText pres__marginTop">
+                            <h4 className="card-title pres__titlesResponse"><i className="fas fa-microchip"></i> Desarrollo de Softwares con UI o Serverless.</h4>
                         </div>
 
                         <button id="btnPlus" hidden onClick={handlePlus} >click</button>
@@ -126,16 +121,12 @@ const Presentacion = () =>
 
             </div>
 
-            <div className="col-12 col-md-6">
+            <div className="col-12 col-md-6 base__alingCenter">
                 
-                <div className="card p-5 base__noBorder animate__animated animate__fadeIn animate__delay-1s">
+                <div className="card pres__card base__alingCenter base__noBorder animate__animated animate__fadeIn animate__delay-1s">
                 
-                    <div className="card-body base__alingCenterColum" style={{ paddingLeft : "4rem" }}>
-                        
-                        <div className="pres__imgBox mb-3 mt-3">
-                            <img src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1618525108/Landing%20test%20sources/brainBase2_c62pkd.gif" alt="brain" style={{ width : "80%" }}/>
-                        </div>
-
+                    <div className="pres__imgBox mt-4 base__alingCenter">
+                        <img src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1618525108/Landing%20test%20sources/brainBase2_c62pkd.gif" alt="brain" className="pres__imgBrain"/>
                     </div>
 
                 </div>

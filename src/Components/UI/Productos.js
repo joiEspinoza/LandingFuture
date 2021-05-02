@@ -69,49 +69,57 @@ const Productos = () =>
 
     return (
         
-        <div className="row UI__Productos mt-3 p-4" id="rowProducto">
+        <div className="row UI__Productos mt-3" id="rowProducto">
             
             <div className="col-md-12">
                 
-              <div id="rowTitleRose" className="row">
+              <div className="row mb-3" id="rowTitleRose">
 
                 <div className="col-md-12">
 
-                    <div className="card p-3 base__noBorder" style={{ height : "100%" }}>
-                        <div className="card-body color__tertiaryText">
-                            <center>
-                                <h1 style={{ color : "#000000" }}>- El futuro en RRHH con Inteligencia Artificial -</h1>
-                            </center>
-                        </div>
+                  <div className="card p-3 base__noBorder">
+                        
+                    <div className="card-body color__tertiaryText text-center">
+                        
+                      <h1 className="product__title" >El futuro en RRHH con Inteligencia Artificial</h1>
+                  
                     </div>
+                    
+                  </div>
 
                 </div>
 
               </div>
 
-                <div className="row mt-3 mb-5">
+              <div className="row mb-5">
                   
-                  <div className="col-md-6 base__alingCenterColum p-5 text-center product__borderR" id="colInfografiaRose1">
+                  <div className="col-md-6 base__alingCenterColum product__borderR product__pbResponse" id="colInfografiaRose1">
 
-                    <img src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1619715061/Landing%20test%20sources/cellstatic/PARNERlOGO_mkp5yd.png" alt="logoRose" style={{ width : "20%", marginLeft : "-5%"}}/>
-                    <img loading="lazy" className="base__pointer mt-4" onClick={handleRedirectRose} src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1619714850/Landing%20test%20sources/cellstatic/robroseBN_jfledi.gif" style={{ width : "40%" }} alt="robEose" />
-                    <p className="mt-5" style={{ color : "#000000", fontSize : "1.2rem" }}> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean facilisis at erat id ultrices.</p>
+                    <img src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1619715061/Landing%20test%20sources/cellstatic/PARNERlOGO_mkp5yd.png" alt="logoRose" className="product__logoRosePartner"/>
+                    
+                    <img loading="lazy" className="base__pointer product__robPartnerRose mt-5" onClick={handleRedirectRose} src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1619714850/Landing%20test%20sources/cellstatic/robroseBN_jfledi.gif" alt="robEose" />
+                    
+                    <div className="card product__card mt-5 text-center">
+                      <p> ROB Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean facilisis at erat id ultrices.</p>
+                    </div>
                     
                   </div>
 
-                  <div className="col-md-6 base__alingCenterColum text-center product__borderL" id="colInfografiaRose2">
+                  <div className="col-md-6 base__alingCenterColum text-center product__borderL product__ptResponse" id="colInfografiaRose2">
 
-                    <img src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1619715061/Landing%20test%20sources/cellstatic/unifyLogo_qims3q.png" alt="logoRose" style={{ width : "20%" }}/>
+                    <img  className="product__uinfyLogoRose" src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1619715061/Landing%20test%20sources/cellstatic/unifyLogo_qims3q.png" alt="logoRose"/>
                     <a id="linkRose" href="https://myfuture.ai/rose/" target="_blank" rel="noreferrer" hidden>asdsad</a>
-                    <img loading="lazy" className="base__pointer mt-4" onClick={handleRedirectRose} src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1619712077/Landing%20test%20sources/cellstatic/inforose3bn_tjkyst.png" style={{ width : "80%" }} alt="infoRose" />
-                    <p className="mt-4" style={{ color : "#000000", fontSize : "1.2rem" }}> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean facilisis at erat id ultrices.</p>
+                    
+                    <img loading="lazy" className="base__pointer mt-5 product__uinfyInfografRose" onClick={handleRedirectRose} src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1619712077/Landing%20test%20sources/cellstatic/inforose3bn_tjkyst.png" alt="infoRose" />
+                    
+                    <div className="card product__card mt-5">
+                      <p> Info Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean facilisis at erat id ultrices.</p>
+                    </div>
                   
                   </div>
                   
                 </div>
-            
-          
-                     
+                   
             </div>
 
         </div>

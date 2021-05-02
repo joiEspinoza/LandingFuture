@@ -18,7 +18,7 @@ const BlogView = () =>
 
     const dispatch = useDispatch();
     const { activeBlog, edit } = useSelector( state => state.blogs );
-    const descriptionHTML = htmlToText.fromString( activeBlog.textBody, { wordwrap : 130 } );
+    const descriptionHTML = htmlToText.fromString( activeBlog.textBody, { wordwrap : 50 } );
     const [ editorState, setEditorState ] = useState( EditorState.createWithContent( ContentState.createFromText( descriptionHTML ) ) );
     const html = convertToHTML( editorState.getCurrentContent() );
 
@@ -78,22 +78,25 @@ const BlogView = () =>
         history.push( "/blog" )
     }
 
- 
+    
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0; 
+
 
 ///////////////////////////************************////////////////////////
 
 
     return (
         
-        <div className="row p-5">
+        <div className="row UI__blogView p-5">
            
             <div className="col-md-12 p-5 base__alingCenterColum">
                 
-                <div className="blog__coverImg p-1" style={{ backgroundImage : `url( ${ url } )` }}>
-                    <h3 className="blog__title">{ title.toUpperCase() }</h3>
-                </div>
+                <h3 className="blog__title">{ title.toUpperCase() }</h3>
                 
-                <div className="form-group mt-5">
+                <div className="blog__coverImg p-1" style={{ backgroundImage : `url( ${ url } )` }}></div>
+                
+                <div className="form-group blog__boxBodyText">
                     <Editor wrapperClass={ "blog__editorWrapper" } toolbarClass={ "blog__toolbarClass" } editorState={ editorState } setEditorState={ setEditorState }/>
                 </div>
 

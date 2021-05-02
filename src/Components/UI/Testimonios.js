@@ -86,7 +86,7 @@ const Testimonios = () =>
 
     return (
         
-        <div id="rowTestimonio"  className="row UI__testimonios p-5 color__tertiaryText">
+        <div id="rowTestimonio"  className="row UI__testimonios p-5 color__tertiaryText base__hiddenResponse">
             
             <div className="col-12 col-md-12">
                 

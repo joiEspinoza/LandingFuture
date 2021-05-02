@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { useHistory, useLocation } from 'react-router';
+import { setActiveBot } from '../../Actions/botActions';
 
 
 //////<<<<<------------------------------------------------``
@@ -7,13 +10,31 @@ import React from 'react';
 const Footer = () => 
 {
     
+    const history = useHistory();
+    const location = useLocation();
+    const handleBlog = () =>
+    {
+        history.push( "/blog" );
+    };
+
+
+    const dispatch = useDispatch();
+    const handleActivate = () =>
+    {
+        dispatch( setActiveBot( false ) );
+    };
+
+
+///////////////////////////************************************************////////////////////////
+
+
     return (
         
         <div className="row UI__footer color__tertiaryBg color__primaryText p-3">
             
             <div className="col-md-4 p-4 base__alingCenterColum">
             
-                <img src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1618929849/Landing%20test%20sources/logofutureAIWhite_f1kehi.png" alt="logo" style={{ width : "15%"  }} />
+                <img className="footer__logoFuture" src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1618929849/Landing%20test%20sources/logofutureAIWhite_f1kehi.png" alt="logo" />
             
                 <p style={{ fontSize : "0.8rem" }}><br/>Dirección: Badajoz 100, Oficina 523<br/>Fono: +569 93319395 | +569 54191540</p>
 
@@ -21,10 +42,11 @@ const Footer = () =>
 
             <div className="col-md-4">
 
-                <center>
-                    <img src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1619744635/Landing%20test%20sources/bannerBlog_bnmqsa.gif" style={{ width : "100%", height : "100%" }} />
-                </center>
-                
+                {
+                    ( !location.pathname.includes( "blog" ) )  &&
+                    <img onClick={ ()=>{ handleBlog(); handleActivate(); }} src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1619744635/Landing%20test%20sources/bannerBlog_bnmqsa.gif" style={{ width : "100%", height : "100%" }} />
+                }
+ 
             </div>
 
             <div className="col-md-4 p-4 base__alingCenterColum">

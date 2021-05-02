@@ -42,6 +42,10 @@ const Blog = () =>
     };
 
 
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0; 
+  
+
 ///////////////////////////************************////////////////////////
 
 
@@ -53,7 +57,7 @@ const Blog = () =>
                 blogs.map( ( blog ) => 
                 {
                 
-                    return <div key={ blog.id } className="col-md-4 p-5 base__alingCenterColum">
+                    return <div key={ blog.id } className="col-12 col-md-6 p-5 base__alingCenterColum">
                         
 
                         <div className="card card-custom bg-white border-white border-0 blog__card base__pointer animate__animated animate__fadeIn" onClick={ ()=>{ handleSetActiveBlog( blog.id ); handleRedirectView(); } }>

@@ -39,16 +39,12 @@ const Infografia = () =>
 
     return (
         
-        <div className="row UI__infografia mt-3 p-5" id="rowInfografia">
+        <div className="row UI__infografia mt-3 p-5 base__hiddenResponse" id="rowInfografia">
             
-            <div className="col-md-12 base__alingCenter p-5">
+            <div className="col-md-12 base__alingCenter">
                 
-                <div id="cardInfo" className="card p-3 mt-4" style={{ width : "auto", height : "100%" }}>
-                    
-                    <img loading="lazy" src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1619710897/Landing%20test%20sources/cellstatic/InfografiaFuture22222_p7cpel.gif" alt="sw1"/>
+                <img id="cardInfo" loading="lazy" className="info_img" src="https://res.cloudinary.com/djlmqpd2n/image/upload/v1619710897/Landing%20test%20sources/cellstatic/InfografiaFuture22222_p7cpel.gif" alt="sw1"/>
                 
-                </div>
-            
             </div>
      
         </div>
